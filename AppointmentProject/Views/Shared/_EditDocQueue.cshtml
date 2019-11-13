@@ -1,0 +1,52 @@
+﻿@model AppointmentProject.Models.DoctorModel
+
+<div class="card mb-grid">
+    <div class="card-header d-flex justify-content-between align-items-center">
+        <div class="card-header-title">Edit Status</div>
+        <nav class="card-header-actions">
+
+            <a title="Close" class="card-header-action" id="closeDocEditIcon" style="color: royalblue">
+                <i data-feather="x-circle" title="Close"></i>
+            </a>
+        </nav>
+    </div>
+    <form id="createForm" class="editForm">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group" hidden>
+            <label asp-for="DId" class="control-label"></label>
+            <input asp-for="DId" class="form-control" id="efDId" />
+            <span asp-validation-for="DId" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="DApQueue" class="control-label"></label>
+            <input asp-for="DApQueue" class="form-control" id="efDq" />
+            <span asp-validation-for="DApQueue" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-2">
+                    <input type="radio" name="rd" id="rdA" class="form-radio" checked>
+                </div>
+                <div class="col-md-2">
+
+                    <label for="rdA" style="margin:10px 0 0 -10px;">Available</label>
+                </div>
+                <div class="col-md-2">
+
+                    <input type="radio" name="rd" id="rdU" class="form-radio">
+                </div>
+                <div class="col-md-2">
+                    <label for="rdU" style="margin:10px 0 0 -10px;">Unavailable</label>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+
+            <input type="button" onclick="EditDocStatus()" value="Save" class="btn btn-outline-primary" style="margin-top: 10px;" />
+
+        </div>
+    </form>
+</div>
+
+
+

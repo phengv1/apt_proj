@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SystemLibraryData.Patient">
+    <Position X="3" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAERAAAAAAAAAAAAAAACAAAACAAAAAAAAABAACABAg=</HashCode>
+      <FileName>Entity\Patient.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SystemLibraryData.Doctor">
+    <Position X="6.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAAAAAAAAAAQIAABCAAAIAAAAAAAAAACAA=</HashCode>
+      <FileName>Entity\Doctor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SystemLibraryData.Card">
+    <Position X="4.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Entity\Card.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SystemLibraryData.ServiceProvider">
+    <Position X="10.25" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgAAAAAAAAAAAAgAMAAAAACAAAAAA=</HashCode>
+      <FileName>Entity\ServiceProvider.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SystemLibraryData.Fee">
+    <Position X="12" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CgAAAEAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entity\Fee.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SystemLibraryData.PatientData">
+    <Position X="3" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAYAAkAAAAAAAAAAAAAACkAAAAEAAAggAEAAAAAAACE=</HashCode>
+      <FileName>DAL\PatientData.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SystemLibraryData.AppointmentData">
+    <Position X="5.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAABACkABBAEAAAggAAAAAIABAAA=</HashCode>
+      <FileName>DAL\AppointmentData.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SystemLibraryData.PatientDataHandler">
+    <Position X="3" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABEAAAAAAIAAAAAACAAAAAAAAAABAAwAAAAAAAAAA=</HashCode>
+      <FileName>BLL\PatientDataHandler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SystemLibraryData.AppointmentDataHandler">
+    <Position X="5.5" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAABACIBAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BLL\AppointmentDataHandler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SystemLibraryData.Appointment">
+    <Position X="8.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAIgAAAAAAAAAAAgAAAAAQAAQCAAAAQAAAAAAACAAEA=</HashCode>
+      <FileName>Entity\Appointment.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SystemLibraryData.DoctorData">
+    <Position X="7.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAEEAAAAAAAAAAAAAACkAAAAEAAAggAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\DoctorData.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SystemLibraryData.DoctorDataHandler">
+    <Position X="7.75" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAAAAAAAAABAAAAAAAAAAEAAAAAA=</HashCode>
+      <FileName>BLL\DoctorDataHandler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SystemLibraryData.Log">
+    <Position X="14" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAABAABAIAAAAAQ=</HashCode>
+      <FileName>Entity\Log.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SystemLibraryData.LogData">
+    <Position X="9.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAEAAAAAAAAAAIgAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\LogData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SystemLibraryData.LogDataHandler">
+    <Position X="9.75" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAA=</HashCode>
+      <FileName>BLL\LogDataHandler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="SystemLibraryData.IPatient">
+    <Position X="1" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAAAAAAAAAEAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\IPatient.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

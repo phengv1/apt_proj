@@ -1,0 +1,74 @@
+﻿@model AppointmentProject.Models.PatientModel
+
+
+<div class="card mb-grid">
+    <div class="card-header d-flex justify-content-between align-items-center">
+        <div class="card-header-title">Create Info</div>
+        <nav class="card-header-actions">
+             
+            <a title="Create New" class="card-header-action"  id="closeCreateIcon">
+                <i data-feather="x-circle" title="Close"></i>
+            </a>
+        </nav>
+    </div>
+    <form id="createForm" method="post">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+
+        <div class="form-group">
+            <label asp-for="CardNo" class="control-label"></label>
+            <input asp-for="CardNo" class="form-control" id="crCard"/>
+            <span asp-validation-for="CardNo" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="PName" class="control-label"></label>
+            <input asp-for="PName" class="form-control" id="crName"/>
+            <span asp-validation-for="PName" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-2 col-sm-2 col-xs-2">
+                    <input type="radio" name="rd" id="rdM" class="form-radio" checked>
+                </div>
+                <div class="col-md-2 col-sm-3">
+                    
+                    <label for="rdM" style="margin:10px 0 0 -10px;">Male</label>
+                </div>
+                <div class="col-md-2 col-sm-2 col-xs-2">
+
+                    <input type="radio" name="rd"  id="rdF"  class="form-radio">
+                </div>
+                <div class="col-md-2 col-sm-3">
+                    <label for="rdF" style="margin:10px 0 0 -10px;">Female</label>
+                </div>
+            </div>
+            
+            
+            @*<label asp-for="PSex" class="control-label"></label>
+            <input asp-for="PSex" class="form-control" id="crSex" />
+            <span asp-validation-for="PSex" class="text-danger"></span>*@
+        </div>
+        <div class="form-group">
+            <label asp-for="PTel" class="control-label"></label>
+            <input asp-for="PTel" class="form-control" id="crTel"/>
+            <span asp-validation-for="PTel" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="PAddress" class="control-label"></label>
+            <input asp-for="PAddress" class="form-control" id="crAddr"/>
+            <span asp-validation-for="PAddress" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="PDocumentNo" class="control-label"></label>
+            <input asp-for="PDocumentNo" class="form-control" id="crDocNo"/>
+            <span asp-validation-for="PDocumentNo" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <input type="button" onclick="CreateInfo()" id="crBtn" value="Create" class="btn btn-outline-primary" style="margin-top: 10px;"/>
+        </div>
+
+    </form>
+    
+    
+</div>
+

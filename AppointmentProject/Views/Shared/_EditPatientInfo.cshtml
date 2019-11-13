@@ -1,0 +1,69 @@
+﻿@model AppointmentProject.Models.PatientModel
+
+<div class="card mb-grid">
+    <div class="card-header d-flex justify-content-between align-items-center">
+        <div class="card-header-title">Edit Info</div>
+        <nav class="card-header-actions">
+             
+            <a title="Close" class="card-header-action" id="closeEditIcon" style="color: royalblue">
+                <i data-feather="x-circle" title="Close"></i>
+            </a>
+        </nav>
+    </div>
+    <form id="createForm" class="editForm">
+
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+
+        <input asp-for="PId" class="form-control" hidden id="efId"/>
+
+        <div class="form-group">
+            <label asp-for="CardNo" class="control-label"></label>
+            <input asp-for="CardNo" class="form-control" id="efCardNo" />
+            <span asp-validation-for="CardNo" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="PName" class="control-label"></label>
+            <input asp-for="PName" class="form-control" id="efName" />
+            <span asp-validation-for="PName" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-2">
+                    <input type="radio" name="rd" id="rdM2" class="form-radio" checked>
+                </div>
+                <div class="col-md-2">
+
+                    <label for="rdM2" style="margin:10px 0 0 -10px;">Male</label>
+                </div>
+                <div class="col-md-2">
+
+                    <input type="radio" name="rd" id="rdF2" class="form-radio">
+                </div>
+                <div class="col-md-2">
+                    <label for="rdF2" style="margin:10px 0 0 -10px;">Female</label>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="PTel" class="control-label"></label>
+            <input asp-for="PTel" class="form-control" id="efTel" />
+            <span asp-validation-for="PTel" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="PAddress" class="control-label"></label>
+            <input asp-for="PAddress" class="form-control" id="efAddr" />
+            <span asp-validation-for="PAddress" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="PDocumentNo" class="control-label"></label>
+            <input asp-for="PDocumentNo" class="form-control" id="efDocNo" />
+            <span asp-validation-for="PDocumentNo" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <input type="button" onclick="EditInfo()" value="Save" class="btn btn-outline-primary" style="margin-top: 10px;" />
+        </div>
+    </form>
+</div>
+
+

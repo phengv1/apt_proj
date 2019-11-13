@@ -1,0 +1,79 @@
+﻿@model IEnumerable<SystemLibraryData.Log>
+
+<div class="card mb-grid">
+    <div class="card-header d-flex justify-content-between align-items-center">
+        <div class="card-header-title">Log Info</div>
+        <nav class="card-header-actions">
+
+            <a class="card-header-action dropdown ">
+                <i class="fa fa-calendar-plus-o btn text-info  dropdown-toggle" data-toggle="dropdown" style="padding:0;" id="chkByDate"></i>
+                <ul class="dropdown-menu" style="padding: 25px;min-width: 200px;">
+                    <li>
+                        <div class="row">
+
+                            <input class="form-control col-12" type="date" placeholder="From..." style="border-radius: 0; padding-top:10px" id="LogDate1" />
+                             
+                            <input class="form-control col-12" type="date" placeholder="Until..." style="border-radius: 0; padding-top:10px" id="LogDate2" />
+
+                            <button id="ChkAptBtn" style="padding-top:10px" onclick="CheckLogByDate()" class="btn btn-block btn-outline-info">Search</button>
+                             
+                        </div>
+
+                    </li>
+                </ul>
+            </a>
+
+            <a class="card-header-action" data-toggle="collapse" href="#ApTableContainer" aria-expanded="false" aria-controls="ApTableContainer" title="Minimize">
+                <i data-feather="minus-circle"></i>
+            </a>
+
+        </nav>
+    </div>
+    <div class="table-responsive-md collapse show" id="ApTableContainer">
+        <table class="table table-actions table-striped table-hover mb-0" id="LogTable" data-role="table">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Id)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Date)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Action)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Message)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Exception)
+                    </th>
+
+                </tr>
+            </thead>
+            <tbody id="tbLogList">
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Id)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Date)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Action)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Message)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Exception)
+                        </td>
+
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

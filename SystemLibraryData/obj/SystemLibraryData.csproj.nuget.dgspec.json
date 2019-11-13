@@ -1,0 +1,68 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Pheng\\Downloads\\Compressed\\AppointmentProject\\SystemLibraryData\\SystemLibraryData.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Pheng\\Downloads\\Compressed\\AppointmentProject\\SystemLibraryData\\SystemLibraryData.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Pheng\\Downloads\\Compressed\\AppointmentProject\\SystemLibraryData\\SystemLibraryData.csproj",
+        "projectName": "SystemLibraryData",
+        "projectPath": "C:\\Users\\Pheng\\Downloads\\Compressed\\AppointmentProject\\SystemLibraryData\\SystemLibraryData.csproj",
+        "packagesPath": "C:\\Users\\Pheng\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Pheng\\Downloads\\Compressed\\AppointmentProject\\SystemLibraryData\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Pheng\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[1.60.1, )"
+            },
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            },
+            "RabbitMQ.Client": {
+              "target": "Package",
+              "version": "[5.1.0, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}

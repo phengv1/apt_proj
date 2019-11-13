@@ -1,0 +1,42 @@
+﻿
+
+#createForm {
+    padding: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 12px;
+}
+
+#createForm input{
+    width: 100%;
+
+}
+
+#createForm .form-group{
+    margin-top: -5px;
+}
+
+#EditIcon, #DeleteIcon{
+    padding: 10px;
+}
+
+.opCell{
+    background: #ffffff;
+    border-radius: 5px;
+}
+
+body.modal-open .supreme-container {
+    -webkit-filter: blur(1px);
+    -moz-filter: blur(1px);
+    -o-filter: blur(1px);
+    -ms-filter: blur(1px);
+    filter: blur(4px);
+}
+
+#createForm label {
+    font-size: 15px;
+}
+
+.sidebar-nav-item i, sidebar-nav-item span {
+    font-size: 18px;
+}
+

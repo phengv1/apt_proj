@@ -1,0 +1,230 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>@ViewData["Title"]</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <link href="~/css/bootstrap.css" rel="stylesheet" />
+
+    <link href="~/css/bootstrap-select.min.css" rel="stylesheet" />
+
+
+    <link href="~/css/material.min.css" rel="stylesheet" />
+
+    <link href="~/css/dataTables.material.min.css" rel="stylesheet" />
+
+    <link href="~/css/jquery.timepicker.min.css" rel="stylesheet" />
+
+
+
+
+    <script src="~/js/jquery-3.2.1.min.js"></script>
+
+    <script src="~/js/popper.min.js"></script>
+
+    <script src="~/js/moment.min.js"></script>
+
+
+    <link href="~/css/bootstrap-datetimepicker-build.css" rel="stylesheet" />
+
+    <script src="~/js/bootstrap-datetimepicker.js"></script>
+
+
+    <link href="~/Content/dist/css/adminx.css" rel="stylesheet" />
+    <link href="~/css/style.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    @*<link href="~/css/all.css" rel="stylesheet" />
+    <link href="~/css/font-awesome.min.css" rel="stylesheet" />*@
+
+    <link href="~/css/main.css" rel="stylesheet" />
+
+
+</head>
+<body>
+    <div class="supreme-container adminx-container">
+        <nav class="navbar navbar-expand justify-content-between fixed-top">
+            <a class="navbar-brand mb-0 h1 d-none d-md-block" href="/home/index">
+                <img src="~/Content/demo/img/logo.png" class="navbar-brand-image d-inline-block align-top mr-2" alt="">
+                <b>Appointment System</b>
+            </a>
+            @*<form class="form-inline form-quicksearch d-none d-md-block mx-auto">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <div class="input-group-icon">
+                                <i data-feather="search"></i>
+                            </div>
+                        </div>
+                        <input type="text" class="form-control" id="search" placeholder="Type to search...">
+                    </div>
+                </form>*@
+            <div class="d-flex flex-1 d-block d-md-none">
+                <a href="#" class="sidebar-toggle ml-3">
+                    <i data-feather="menu"></i>
+                </a>
+            </div>
+            <ul class="navbar-nav d-flex justify-content-end mr-2">
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link avatar-with-name rounded-circle" id="navbarDropdownMenuLink" data-toggle="dropdown" href="#">
+                        <img src="https://img.icons8.com/pastel-glyph/64/000000/gender-neutral-user.png" class="d-inline-block align-top" alt="">
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item btn" id="username"></a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item text-danger" href="/home/Logout/" id="logout">Logout</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <!-- expand-hover push -->
+        <!-- Sidebar -->
+        <div class="adminx-sidebar expand-hover push">
+            <ul class="sidebar-nav">
+                <li class="sidebar-nav-item">
+                    <a href="/home/index" class="sidebar-nav-link active" id="pSideMenu">
+                        <span class="sidebar-nav-icon">
+                            <i class="fas fa-user-injured"></i>
+                        </span>
+                        <span class="sidebar-nav-name">
+                            <b>Patient</b>
+                        </span>
+                        <span class="sidebar-nav-end">
+                        </span>
+                    </a>
+                </li>
+                <li class="sidebar-nav-item">
+                    <a href="/Doctor/index" class="sidebar-nav-link" id="docSideMenu">
+                        <span class="sidebar-nav-icon">
+                            <i class="fas fa-stethoscope"></i>
+                        </span>
+                        <span class="sidebar-nav-name">
+                            <b>Doctor</b>
+                        </span>
+                        <span class="sidebar-nav-end">
+                        </span>
+                    </a>
+                </li>
+                <li class="sidebar-nav-item">
+                    <a href="/appointment" class="sidebar-nav-link" id="aptSideMenu">
+                        <span class="sidebar-nav-icon">
+                            <i class="fa fa-calendar-plus-o"></i>
+
+                        </span>
+                        <span class="sidebar-nav-name">
+                            <b>Appointment</b>
+                        </span>
+                        <span class="sidebar-nav-end">
+                            @*<span class="badge badge-info">4</span>*@
+                        </span>
+                    </a>
+                </li>
+
+                <li class="sidebar-nav-item">
+
+                    <a href="/Log" class="sidebar-nav-link" id="logSideMenu">
+                        <span class="sidebar-nav-icon">
+                            <i class="fa fa-file-text-o"></i>
+                        </span>
+                        <span class="sidebar-nav-name">
+                            <b>Log</b>
+                        </span>
+                        <span class="sidebar-nav-end">
+                            @*<span class="badge badge-info">4</span>*@
+                        </span>
+                    </a>
+                </li>
+
+            </ul>
+        </div><!-- Sidebar End -->
+        <!-- adminx-content-aside -->
+        <div class="adminx-content">
+            <!-- <div class="adminx-aside">
+
+            </div> -->
+            <div class="adminx-main-content">
+                <div class="container-fluid">
+
+                    @RenderBody()
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="ShowModal" class="modal fade col-md-4 col-sm-8 col-xs-9" style=" margin: 30px auto; color: #494747; font-family: Arial, sans-serif;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 style="margin:0; padding: 0; font: ">Login Form</h4>
+                </div>
+                <div class="modal-body">
+
+                    <form id="Registration">
+                        <div class="form-group">
+                            <div class="input-group">
+
+                                <input type="text" id="usr" required placeholder="Username" value="" class="form-control" />
+
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+
+                                <input type="password" id="pw" required placeholder="Password" value="" class="form-control" />
+
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-outline-info form-control" onclick="Login()" type="button">Login</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- If you prefer jQuery these are the required scripts -->
+    <!-- Latest compiled and minified JavaScript -->
+
+    <script src="~/js/bootstrap.min.js"></script>
+
+
+    <script src="~/js/bootstrap-select.min.js"></script>
+
+
+
+    <script src="~/js/jquery.dataTables.min.js"></script>
+
+
+    <script src="~/js/jquery-ui.js"></script>
+
+
+    <script src="~/js/dataTables.bootstrap4.min.js"></script>
+
+
+    <script src="~/js/popper2.min.js"></script>
+
+    <script src="~/js/jquery.timepicker.min.js"></script>
+
+    <script type="application/javascript" src="~/Content/dist/js/vendor.js"></script>
+    <script type="application/javascript" src="~/Content/dist/js/adminx.js"></script>
+    <script src="~/js/custom.js"></script>
+
+
+
+    <!-- If you prefer vanilla JS these are the only required scripts -->
+    <!-- script src="./dist/js/vendor.js"></script>
+    <script src="./dist/js/adminx.vanilla.js"></script-->
+    @RenderSection("Scripts", required: false)
+
+    @section Scripts {
+
+        @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+
+    }
+</body>
+
+</html>

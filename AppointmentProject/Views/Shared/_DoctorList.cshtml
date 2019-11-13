@@ -1,0 +1,49 @@
+﻿@model IEnumerable<SystemLibraryData.Doctor>
+
+<div class="card mb-grid">
+    <div class="card-header d-flex justify-content-between align-items-center">
+        <div class="card-header-title">Doctors Info</div>
+        <nav class="card-header-actions">
+
+            <a class="card-header-action" data-toggle="collapse" href="#card1" aria-expanded="false" aria-controls="card1" title="Minimize">
+                <i data-feather="minus-circle"></i>
+            </a>
+            
+        </nav>
+    </div>
+    <div class="table-responsive-md collapse show" id="card1">
+        <table class="table table-actions table-striped table-hover mb-0" id="DoctListTable">
+
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.DId)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.DName)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.DSex)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.DFee)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.DTel)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.DApQueue)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.DStatus)
+                    </th>
+
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody id="tbDocList">
+              
+            </tbody>
+        </table>
+    </div>
+</div>
